@@ -1,0 +1,6 @@
+{
+	"TsStep": 21600000,
+	"MaxSpeed": 132,
+	"PositionThreshold": 50,
+	"DistanceThreshold": 2000
+}

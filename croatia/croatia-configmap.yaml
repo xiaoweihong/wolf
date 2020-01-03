@@ -1,0 +1,79 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bultgang-config
+  namespace: wolf
+data:
+  croatia_config.txt: | 
+    {
+      "ValidFileStuffix": {
+        ".bmp": ".bmp",
+        ".jpg": ".jpg",
+        ".png": ".png",
+        ".tiff": ".tiff"
+      },
+      "MatrixConfig": {
+        "IsOpen": false,
+        "Addr": "http://192.168.5.78:38080/vse/face/rec/image",
+        "ConnectNumber": 10,
+        "TimeoutSecond": 5,
+        "TryTimes": 3,
+        "AllFaceContext": {
+          "SessionId": "all_face",
+          "Functions": [
+            200
+          ],
+          "Type": 2,
+          "Params": {
+            "detect_mode": "1"
+          }
+        }
+      },
+      "RankerConfig": {
+        "WarnRankerAddr": "http://192.168.5.78:9809",
+        "WarnRankerConnectNumber": 10,
+        "TimeoutSecond": 5,
+        "TryTimes": 3,
+        "RepoUpdateTimeSecond": 30,
+        "IsLibraryUpdate": false
+      },
+      "MatrixThreadPoolMaxNum": 1000,
+      "MatrixThreadPoolOpenNum": 50,
+      "ItemProcessGroupNum": 100000,
+      "RollBackTreadPoolNum": 100,
+      "MaxItemNum": 10000000,
+      "MaxInputTaskNum": 2,
+      "MaxDeleteTaskNum": 1,
+      "MaxCopyTaskNum": 1,
+      "MaxItemNumOnePerson": 5,
+      "ImageSaveGroupNum": 100000,
+      "ImageSaveThreadPoolMaxNum": 20,
+      "DeleteThreadPoolMaxNum": 200,
+      "ImageSaveConfig": {
+        "ConfigType": 1,
+        "ConfigInfo": {
+          "Host": "192.168.5.78:7502",
+          "TimeoutSecond": 3,
+          "ConnectNumber": 10
+        }
+      },
+      "DBServiceConfig": {
+        "ConfigType": 1,
+        "ConfigInfo": {
+          "ClientNum": 1,
+          "Host": "postgres-service.wolf.svc.cluster.local",
+          "Port": 5432,
+          "UserName": "postgres",
+          "PassWord": "Zstvgcs@9102",
+          "DBName": "deepface_v5",
+          "MaxOpenConnsPerClient": 20,
+          "MaxIdleConnsPerClient": 20,
+          "MaxLifeTimeSeconds": 60
+        }
+      },
+      "StatusTmpDir": "config/",
+      "RepoCountUpdateServiceConfig": {
+        "IsOpen": true,
+        "HttpUrl": "http://192.168.5.78:3000/internal/croatia/repo"
+      }
+    }
