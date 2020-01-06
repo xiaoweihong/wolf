@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: capture-seaweedfs-master
-        image: chrislusf/seaweedfs:1.44
+        image: dockerhub.deepglint.com/wolf/seaweedfs:1.48
         ports:
         - name: http
           containerPort: 9333
@@ -54,7 +54,7 @@ spec:
     spec:
       containers:
       - name: capture-seaweedfs-volume00
-        image: chrislusf/seaweedfs:1.44
+        image: dockerhub.deepglint.com/wolf/seaweedfs:1.48
         ports:
         - name: http
           containerPort: 9300
@@ -65,7 +65,7 @@ spec:
         - "volume"
         - "-mserver=capture-seaweedfs-service-master.wolf.svc.cluster.local:9333"
         - "-ip=capture-seaweedfs-service-volume00.wolf.svc.cluster.local"
-        - "-publicUrl=192.168.2.113:30300"
+        - "-publicUrl=192.168.2.169:30300"
         - "-dir=/data"
         - "-port=9300"
         - "-max=55"
@@ -96,7 +96,7 @@ spec:
     spec:
       containers:
       - name: capture-seaweedfs-master
-        image: chrislusf/seaweedfs:1.44
+        image: dockerhub.deepglint.com/wolf/seaweedfs:1.48
         ports:
         - name: http
           containerPort: 9301
@@ -107,7 +107,7 @@ spec:
         - "volume"
         - "-mserver=capture-seaweedfs-service-master.wolf.svc.cluster.local:9333"
         - "-ip=capture-seaweedfs-service-volume01.wolf.svc.cluster.local"
-        - "-publicUrl=192.168.2.113:30301"
+        - "-publicUrl=192.168.2.169:30301"
         - "-dir=/data"
         - "-port=9301"
         - "-max=55"
@@ -137,7 +137,7 @@ spec:
     spec:
       containers:
       - name: register-seaweedfs-master
-        image: chrislusf/seaweedfs:1.44
+        image: dockerhub.deepglint.com/wolf/seaweedfs:1.48
         ports:
         - name: http
           containerPort: 5333
@@ -176,7 +176,7 @@ spec:
     spec:
       containers:
       - name: register-seaweedfs-volume00
-        image: chrislusf/seaweedfs:1.44
+        image: dockerhub.deepglint.com/wolf/seaweedfs:1.48
         ports:
         - name: http
           containerPort: 5300
@@ -187,7 +187,7 @@ spec:
         - "volume"
         - "-mserver=register-seaweedfs-service-master.wolf.svc.cluster.local:5333"
         - "-ip=register-seaweedfs-service-volume00.wolf.svc.cluster.local"
-        - "-publicUrl=192.168.2.113:30500"
+        - "-publicUrl=192.168.2.169:30500"
         - "-dir=/data"
         - "-port=5300"
         - "-max=55"
@@ -218,7 +218,7 @@ spec:
     spec:
       containers:
       - name: register-seaweedfs-volume01
-        image: chrislusf/seaweedfs:1.44
+        image: dockerhub.deepglint.com/wolf/seaweedfs:1.48
         ports:
         - name: http
           containerPort: 5301
@@ -229,7 +229,7 @@ spec:
         - "volume"
         - "-mserver=register-seaweedfs-service-master.wolf.svc.cluster.local:5333"
         - "-ip=register-seaweedfs-service-volume01.wolf.svc.cluster.local"
-        - "-publicUrl=192.168.2.113:30501"
+        - "-publicUrl=192.168.2.169:30501"
         - "-dir=/data"
         - "-port=5301"
         - "-max=55"

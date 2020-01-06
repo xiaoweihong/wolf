@@ -118,7 +118,7 @@ spec:
   - name: http
     port: 5301
     targetPort: 5301
-    nodePort: 30501
+    nodePort: 32501
   - name: grpc
     port: 15301
     targetPort: 15301

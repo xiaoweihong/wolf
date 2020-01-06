@@ -60,7 +60,7 @@ data:
           "ConfigType": 1,
           "ConfigInfo": {
             "ClientNum": 1,
-            "Host": "postgres-service.wolf.svc.cluster.local",
+            "Host": "192.168.2.169",
             "Port": 5432,
             "UserName": "postgres",
             "PassWord": "Zstvgcs@9102",

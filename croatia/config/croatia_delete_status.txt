@@ -1,0 +1,17 @@
+{
+	"TaskStatusMap": {
+		"0": {
+			"RepoID": "",
+			"CurrentState": "TaskStateType_Free",
+			"InnerErrorStatus": {
+				"Errors": []
+			},
+			"LibraryDeleteStatus": {
+				"DeleteTotalNum": 0,
+				"RightNum": 0,
+				"ErrorNum": 0
+			},
+			"DeletePath": ""
+		}
+	}
+}

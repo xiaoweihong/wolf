@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: arcee-capture
-        image: xiaoweihong/arcee:0.5.4_sp1
+        image: dockerhub.deepglint.com/wolf/arcee:0.5.4_sp2
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
@@ -55,7 +55,7 @@ spec:
     spec:
       containers:
       - name: arcee-register
-        image: xiaoweihong/arcee:0.5.4_sp1
+        image: dockerhub.deepglint.com/wolf/arcee:0.5.4_sp2
         imagePullPolicy: IfNotPresent
         ports:
         - name: http

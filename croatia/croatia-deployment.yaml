@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: croatia
-        image: xiaoweihong/croatia:0.6.4
+        image: dockerhub.deepglint.com/wolf/croatia:2.0.1
         imagePullPolicy: IfNotPresent
         ports:
         - name: http

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pse-config
+  namespace: wolf
+data:
+  config.json: |
+    {
+      "ListenAddr": "0.0.0.0:1989",
+      "RedisServiceConfig": {
+        "Addr": "192.168.2.169:6379",
+        "Passward": "deepglint@2013",
+        "DB": 2
+      }
+    }

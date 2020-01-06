@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: athena
-        image: xiaoweihong/athena:v0.10.40
+        image: dockerhub.deepglint.com/wolf/athena:v0.12.7
         imagePullPolicy: IfNotPresent
         ports:
         - name: http

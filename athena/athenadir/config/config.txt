@@ -1,8 +1,0 @@
-{
-	"ListenAddr": "0.0.0.0:2013",
-	"MaxTaskNum": 500,
-	"AthenaTmpDir": "/platformData/athenadir/tmp/",
-	"StatusTmpDir": "/platformData/athenadir/tmp/status/",
-	"MaxQueueLength":30,
-	"MaxRunningTasks":10
-}

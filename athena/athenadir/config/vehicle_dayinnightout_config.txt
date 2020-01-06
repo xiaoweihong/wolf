@@ -1,4 +1,0 @@
-{
-	"TsStep": 3600000,
-	"Comment": "default: 3600000 = 1h"
-}
