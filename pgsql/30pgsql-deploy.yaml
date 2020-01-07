@@ -41,7 +41,7 @@ spec:
          volumes:
             - name: postgredb
               hostPath:
-                path: /platformData/postgresql
+                path: /platformData/postgresql2
               #persistentVolumeClaim:
               #  claimName: data-pgsql-0
             - name: localtime
