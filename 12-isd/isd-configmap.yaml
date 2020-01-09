@@ -13,15 +13,15 @@ data:
             "IsOpen":true,
             "ConfigType":1,
             "ConfigInfo":{
-                "Host":"arcee-register-service.wolf.svc.cluster.local:8502",
+                "Host":"arcee-capture-service.wolf.svc.cluster.local:8502",
                 "TimeoutSecond":3,
                 "ConnectNumber":5
             }
         },
         "MatrixServiceConfig":{
             "IsOpen":true,
-            "Addr":"http://ingress-nginx.ingress-nginx.svc.cluster.local/vse/face/rec/image",
-            "StructuredAddr":"http://ingress-nginx.ingress-nginx.svc.cluster.local/vse/vehicle/rec/image",
+            "Addr":"http://ingress-nginx.ingress-nginx.svc.cluster.local:80/vse/face/rec/image",
+            "StructuredAddr":"http://ingress-nginx.ingress-nginx.svc.cluster.local:80/vse/vehicle/rec/image",
             "ConnectNumber":10,
             "TimeoutSecond":5,
             "TryTimes":3

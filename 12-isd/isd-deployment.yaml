@@ -24,7 +24,7 @@ spec:
         args:
         - "-stderrthreshold=0"
         - "-logtostderr=true"
-        - "-v=4"
+        - "-v=8"
         volumeMounts:
         - name: isd-config
           mountPath: /isd/tmp

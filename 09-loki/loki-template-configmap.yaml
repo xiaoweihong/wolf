@@ -15,7 +15,7 @@ data:
             "passwd":"Admin123",
             "camera":"DC84",
             "kafkaconfig":{
-                "kafka_addr":"192.168.2.169:32400",
+                "kafka_addr":"192.168.100.118:32400",
                 "kafka_topic":"face-importer",
                 "kafka_max_size_bytes":"104857600"
             },
@@ -43,7 +43,7 @@ data:
             "back_ground_width":"1920",
             "back_ground_height":"1080",
             "kafkaconfig":{
-                "kafka_addr":"192.168.2.169:32400",
+                "kafka_addr":"192.168.100.118:32400",
                 "kafka_topic":"face-importer",
                 "kafka_max_size_bytes":"104857600"
                           },
@@ -66,9 +66,9 @@ data:
             "user_name":"123",
             "passwd":"123",
             "kafkaconfig":{
-                "kafka_addr":"192.168.2.169:32400",
+                "kafka_addr":"192.168.100.118:32400",
                 "kafka_topic":"face-importer",
-                "kafka_max_size_bytes":"4000000"
+                "kafka_max_size_bytes":"50000000"
                           },
     
             "reconnect_time":"",
@@ -90,12 +90,12 @@ data:
         },
         "DataType":"protobuf",
         "DefaultSpeed":10,
-        "ArceeAddr":"127.0.0.1:8502",
+        "ArceeAddr":"192.168.100.118:30852",
         "RedisConfig":{
           "Database":4,
           "ReadTimeout":1,
           "Addrs":[
-            "192.168.2.169:6379"
+            "192.168.100.118:6379"
           ],
           "Password":"deepglint@2013",
           "SingleNode":true,
@@ -106,7 +106,7 @@ data:
           "RedLock":null
         },
         "DefaltKafkaConsumer":{
-          "KafkaBootstrapServers":"192.168.2.169:32400",
+          "KafkaBootstrapServers":"192.168.100.118:32400",
           "KafkaGroupName":"index-vehicle2",
           "KafkaTopic":[
             "index-vehicle2"
@@ -118,12 +118,12 @@ data:
           "PoolSize":300,
           "AllObject":true,
           "ReqTimeOut":10,
-          "HttpAddr":"http://192.168.2.169:38080/vse/vehicle/rec/image",
+          "HttpAddr":"http://192.168.100.118:38080/vse/vehicle/rec/image",
           "ConcurrenceConsumerNum":10,
           "FilterThreshold":0.5,
-          "Addr":"1127.0.0.1:6504",
+          "Addr":"127.0.0.1:6504",
           "FaceGrpcAddr":"127.0.0.1:6504",
-          "FaceHttpSchema":"http://192.168.2.169:38080/vse/face/rec/image",
+          "FaceHttpSchema":"http://192.168.100.118:38080/vse/face/rec/image",
           "FExpandConfig":{
             "Top":0.5,
             "Bottom":0.1,
@@ -168,7 +168,7 @@ data:
         },
         "MatrixMode":true,
         "DeleteMode":false,
-        "DefaultKafkaAddr":"192.168.2.169:32400",
+        "DefaultKafkaAddr":"192.168.100.118:32400",
         "DefaultTask":{
           "Output":{
             "Attributes":[
@@ -178,7 +178,7 @@ data:
               },
               {
                 "Key":"address",
-                "Value":"192.168.2.169:32400"
+                "Value":"192.168.100.118:32400"
               }
             ],
             "SpeedLimit":1,
@@ -237,7 +237,7 @@ data:
   importer_libraF.json: | 
     {
         "Weed":{
-            "Host":"127.0.0.1:8502",
+            "Host":"192.168.100.118:30852",
             "IsOpen":true
         },
         "OutputSlice":[
@@ -247,7 +247,7 @@ data:
                     "MaxThread":100,
                     "KafkaTopic":"face-importer",
                     "KafkaAddress":[
-                        "192.168.2.169:32400"
+                        "192.168.100.118:32400"
                     ],
                     "MaxMessageBytes":"104857600"
                 }
@@ -283,7 +283,7 @@ data:
             "user_name":"admin",
             "passwd":"admin123",
             "kafkaconfig":{
-                "kafka_addr":"192.168.2.169:32400",
+                "kafka_addr":"192.168.100.118:32400",
                 "kafka_topic":"face-importer",
                 "kafka_max_size_bytes":"104857600"
                           },
@@ -305,7 +305,7 @@ data:
             "user_name":"admin",
             "passwd":"admin123",
             "kafkaconfig":{
-                "kafka_addr":"192.168.2.169:32400",
+                "kafka_addr":"192.168.100.118:32400",
                 "kafka_topic":"face-importer",
                 "kafka_max_size_bytes":"104857600"
                           },

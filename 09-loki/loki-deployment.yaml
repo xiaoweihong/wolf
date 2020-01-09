@@ -25,6 +25,11 @@ spec:
         - "-stderrthreshold=0"
         - "-logtostderr=true"
         - "-v=8"
+        env:
+        - name: HOSTIP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.hostIP
         volumeMounts:
         - name: loki-config
           mountPath: /loki/config/production.json
