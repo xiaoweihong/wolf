@@ -28,7 +28,12 @@ spec:
         volumeMounts:
         - name: archimedes-config
           mountPath: /archimedes/config
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
         - name: archimedes-config
           configMap:
             name: archimedes-config
+        - name: localtime
+          hostPath:
+            path: /etc/localtime

@@ -28,7 +28,12 @@ spec:
         volumeMounts:
         - name: isd-config
           mountPath: /isd/tmp
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
         - name: isd-config
           configMap:
             name: isd-config
+        - name: localtime
+          hostPath:
+            path: /etc/localtime

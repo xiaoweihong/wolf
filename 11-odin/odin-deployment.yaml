@@ -29,7 +29,12 @@ spec:
         - name: odin-config
           mountPath: /odin/configs/config.json
           subPath: config.json
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
         - name: odin-config
           configMap:
             name: odin-config
+        - name: localtime
+          hostPath:
+            path: /etc/localtime

@@ -29,7 +29,12 @@ spec:
         - name: pse-config
           mountPath: /pse/config/config.json
           subPath: config.json
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
         - name: pse-config
           configMap:
             name: pse-config
+        - name: localtime
+          hostPath:
+            path: /etc/localtime

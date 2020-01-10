@@ -32,10 +32,15 @@ spec:
         volumeMounts:
         - name: arcee-capture
           mountPath: /arcee/config
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
         - name: arcee-capture
           configMap:
             name: arcee-capture-config
+        - name: localtime
+          hostPath:
+            path: /etc/localtime
 ---
 
 apiVersion: apps/v1
@@ -72,7 +77,12 @@ spec:
         volumeMounts:
         - name: arcee-register
           mountPath: /arcee/config
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
         - name: arcee-register
           configMap:
             name: arcee-register-config
+        - name: localtime
+          hostPath:
+            path: /etc/localtime

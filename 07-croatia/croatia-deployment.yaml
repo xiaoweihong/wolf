@@ -30,6 +30,8 @@ spec:
           mountPath: /croatia/config
         - name: croatia-upload
           mountPath: /platformData/loki/upload
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
         - name: croatia-config
           configMap:
@@ -37,3 +39,6 @@ spec:
         - name: croatia-upload
           hostPath:
             path: /platformData/loki/upload
+        - name: localtime
+          hostPath:
+            path: /etc/localtime

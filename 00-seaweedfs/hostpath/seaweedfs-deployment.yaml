@@ -30,10 +30,15 @@ spec:
         volumeMounts:
         - name: capture-master-data
           mountPath: /data
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
       - name: capture-master-data
         hostPath:
           path: /platformData/weedfs/capture/master
+      - name: localtime
+        hostPath:
+          path: /etc/localtime
 
 ---
 
@@ -72,10 +77,15 @@ spec:
         volumeMounts:
         - name: capture-data-volume00
           mountPath: /data
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
       - name: capture-data-volume00
         hostPath:
           path: /platformData/weedfs/capture/volume00
+      - name: localtime
+        hostPath:
+          path: /etc/localtime
 
 ---
 
@@ -114,10 +124,15 @@ spec:
         volumeMounts:
         - name: capture-data-volume01
           mountPath: /data
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
       - name: capture-data-volume01
         hostPath:
           path: /platformData/weedfs/capture/volume01
+      - name: localtime
+        hostPath:
+          path: /etc/localtime
 
 ---
 apiVersion: apps/v1
@@ -152,10 +167,15 @@ spec:
         volumeMounts:
         - name: register-master-data
           mountPath: /data
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
       - name: register-master-data
         hostPath:
           path: /platformData/weedfs/register/master
+      - name: localtime
+        hostPath:
+          path: /etc/localtime
 
 ---
 
@@ -194,10 +214,15 @@ spec:
         volumeMounts:
         - name: register-data-volume00
           mountPath: /data
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
       - name: register-data-volume00
         hostPath:
           path: /platformData/weedfs/register/volume00
+      - name: localtime
+        hostPath:
+          path: /etc/localtime
 
 ---
 
@@ -236,7 +261,12 @@ spec:
         volumeMounts:
         - name: register-data-volume01
           mountPath: /data
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
       - name: register-data-volume01
         hostPath:
           path: /platformData/weedfs/register/volume01
+      - name: localtime
+        hostPath:
+          path: /etc/localtime

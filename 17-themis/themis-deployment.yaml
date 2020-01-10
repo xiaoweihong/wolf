@@ -29,7 +29,12 @@ spec:
         - name: themis-config
           mountPath: /themis/config.json
           subPath: config.json
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
         - name: themis-config
           configMap:
             name: themis-config
+        - name: localtime
+          hostPath:
+            path: /etc/localtime

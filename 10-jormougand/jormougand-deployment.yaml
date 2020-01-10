@@ -25,6 +25,8 @@ spec:
           mountPath: /etc/nginx/conf.d
         - name: athena-tmp
           mountPath: /platformData/athenadir/tmp
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
         - name: jormougand-config
           configMap:
@@ -32,3 +34,6 @@ spec:
         - name: athena-tmp
           hostPath:
             path: /platformData/athenadir/tmp
+        - name: localtime
+          hostPath:
+            path: /etc/localtime

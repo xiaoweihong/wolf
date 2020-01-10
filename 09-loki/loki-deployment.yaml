@@ -43,6 +43,8 @@ spec:
           mountPath: /platformData/loki/upload
         - name: loki-video
           mountPath: /data/bigtoe/upload-videos
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
         - name: loki-config
           configMap:
@@ -56,3 +58,6 @@ spec:
         - name: loki-video
           hostPath:
             path: /data/bigtoe/upload-videos
+        - name: localtime
+          hostPath:
+            path: /etc/localtime

@@ -26,7 +26,12 @@ spec:
         volumeMounts:
         - name: eventpoxy-config
           mountPath: /eventpoxy/config
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
         - name: eventpoxy-config
           configMap:
             name: eventpoxy-config
+        - name: localtime
+          hostPath:
+            path: /etc/localtime

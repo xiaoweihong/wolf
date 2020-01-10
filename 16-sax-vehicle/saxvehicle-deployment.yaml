@@ -24,7 +24,12 @@ spec:
         volumeMounts:
         - name: saxvehicle-config
           mountPath: /saxvehicle/config
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
         - name: saxvehicle-config
           configMap:
             name: saxvehicle-config
+        - name: localtime
+          hostPath:
+            path: /etc/localtime

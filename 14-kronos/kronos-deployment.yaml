@@ -28,7 +28,12 @@ spec:
         volumeMounts:
         - name: kronos-config
           mountPath: /kronos/config
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
         - name: kronos-config
           configMap:
             name: kronos-config
+        - name: localtime
+          hostPath:
+            path: /etc/localtime

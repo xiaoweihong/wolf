@@ -32,6 +32,8 @@ spec:
           mountPath: /athena/athenadir/exportsqltoexceltask/style
         - name: athena-tmp
           mountPath: /platformData/athenadir/tmp
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
         - name: athena-run-config
           configMap:
@@ -42,3 +44,6 @@ spec:
         - name: athena-tmp
           hostPath:
             path: /platformData/athenadir/tmp
+        - name: localtime
+          hostPath:
+            path: /etc/localtime

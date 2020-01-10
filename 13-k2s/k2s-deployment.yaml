@@ -29,7 +29,12 @@ spec:
         volumeMounts:
         - name: k2s-config
           mountPath: /k2s/config
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
         - name: k2s-config
           configMap:
             name: k2s-config
+        - name: localtime
+          hostPath:
+            path: /etc/localtime

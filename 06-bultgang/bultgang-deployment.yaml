@@ -29,7 +29,12 @@ spec:
         - name: bultgang-config
           mountPath: /bultgang/config.json
           subPath: config.json
+        - name: localtime
+          mountPath: /etc/localtime
       volumes:
         - name: bultgang-config
           configMap:
             name: bultgang-config
+        - name: localtime
+          hostPath:
+            path: /etc/localtime
